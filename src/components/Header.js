@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {Text, View} from 'react-native';
 
 import PropTypes from 'prop-types';
 
 const Header = (props) => {
-    const { textStyle, viewStyle } = styles;
+    const {textStyle, viewStyle} = styles;
 
     return (
         <View style={viewStyle}>
@@ -14,17 +14,19 @@ const Header = (props) => {
 };
 
 
-Header.propTypes = {};
+Header.propTypes = {
+    headerText: PropTypes.string.isRequired
+};
 
 const styles = {
     viewStyle: {
-       backgroundColor: '#F8F8F8',
-       justifyContent: 'center',
-       alignItems: 'center',
-       height: 60,
-       paddingTop: 5,
-       shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        paddingTop: 5,
+        shadowColor: '#000',
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.6,
         elevation: 2,
         position: 'relative'
